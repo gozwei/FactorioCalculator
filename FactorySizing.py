@@ -61,7 +61,7 @@ def SizeFactory(Materials, Processes):
         p.ValidateInputsAndOutputs(Materials)
 
     # Initalize model
-    Model = pywraplp.Solver.CreateSolver('gurobi')
+    Model = pywraplp.Solver.CreateSolver('cbc')
 
     # Create a decision variable for each process
     for p in Processes.values():
